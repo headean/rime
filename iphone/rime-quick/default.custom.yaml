@@ -1,0 +1,21 @@
+patch:
+  schema_list:
+  - schema: luna_pinyin
+  - schema: wubi_pinyin
+  - schema: double_pinyin_abc
+  - schema: double_pinyin_flypy
+  - schema: double_pinyin_mspy
+  - schema: double_pinyin_pyjj
+  - schema: wubi86
+  - schema: wubi091
+  - schema: wubi98
+  - schema: flypy
+  - schema: flypyplus
+  - schema: jyutping
+  - schema: quick5
+  - schema: xqjz
+  - schema: xqzm
+  - schema: cangjie5_express
+  - schema: easy_en
+  - schema: cangjie5
+  - schema: quick6

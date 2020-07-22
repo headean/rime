@@ -3,7 +3,7 @@
 
 schema:
   schema_id: quick6                                                     # 注意此ID與文件名裏 .schema.yaml 之前的部分相同
-  name: 速成                                                            # 將在〔方案選單〕中顯示
+  name: headean                                                            # 將在〔方案選單〕中顯示
   version: "1.0"                                                        # 這是文字類型而非整數或小數，如 "1.2.3"
   author:
     - headean <386495531@qq.com>
@@ -35,7 +35,7 @@ engine:                                                                 # 輸入
     - selector                                                          # ※ 選字處理器，處理數字選字鍵、上、下候選定位、換頁鍵
     - navigator                                                         # ※ 處理輸入欄內的光標移動鍵
     - express_editor                                                    # ※ 編輯器，處理空格、回車上屏、回退鍵等 # ※ 句式編輯器，用於以空格斷詞、回車上屏的【注音】、【語句流】等輸入方案，替換 express_editor，也可以寫作 fluency_editor
-  segmentors:                                                           # 二、這批組件識別不同內容類型，將輸入碼分段
+  segmentors:                                                           # 二、這批組件識別不同內容類型，將輸入碼分段 
     - ascii_segmentor                                                   # ※ 標識西文段落
     - matcher                                                           # ※ 標識符合特定規則的段落，如網址、反查等
     - abc_segmentor                                                     # ※ 標識常規的文字段落
@@ -48,9 +48,9 @@ engine:                                                                 # 輸入
   filters:                                                              # 四、這批組件過濾翻譯的結果
     - simplifier                                                        # ※ 繁簡轉換
     - uniquifier                                                        # ※ 過濾重複的候選字，有可能來自繁簡轉換
-
-speller:
-  alphabet: zyxwvutsrqponmlkjihgfedcba
+                                                                
+speller:                                                                
+  alphabet: zyxwvutsrqponmlkjihgfedcba                                  
   delimiter: " ;'"                                                      # 隔音符號用「'」；第一位的空白用來自動插入到音節邊界處
   algebra:                                                              # 拼寫運算規則，這個纔是實現雙拼方案的重點。寫法有很多種，當然也可以把四百多個音節碼一條一條地列舉
     - 'derive/^([^z])\w+(\w)$/$1$2/'                                    # 取倉頡首尾二碼爲速成碼
@@ -59,7 +59,6 @@ translator:
   dictionary: quick6                                                    # 自定義 quick6 詞典 | 可在字典中修改對應規則
   prism: quick6                                                         # prism 要以本輸入方案的名稱來命名，以免把朙月拼音的拼寫映射表覆蓋掉
   preedit_format:                                                       # 這段代碼用來將輸入的雙拼碼反轉爲全拼顯示；待見雙拼碼的可以把這段拿掉
-    #- 'xform/^([a-z]*)$/$1\t（\U$1\E）/'                                # 輸入框提示英文對應中文倉頡造字 | 新增
     - "xlit|abcdefghijklmnopqrstuvwxyz;'|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符··|"
   comment_format:
     - "xlit|abcdefghijklmnopqrstuvwxyz~|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符～|"
