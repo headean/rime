@@ -1419,9 +1419,9 @@ preset_keyboards:
     - {label: '大', long_click: '%', click: k}
     - {label: '中', long_click: '^', click: l}
     - {long_click: '?', click: '/'}
-    - {label: '符', click: z, long_click: Left}
-    - {label: '難', click: x, long_click: Down}
-    - {label: '金', click: c, long_click: Right}
+    - {label: '符', long_click: Left, click: z}
+    - {label: '难', long_click: Down, click: x}
+    - {label: '金', long_click: Right, click: c}
     - {label: '女', long_click: '&', click: v}
     - {label: '月', long_click: '*', click: b}
     - {label: '弓', long_click: '(', click: n}

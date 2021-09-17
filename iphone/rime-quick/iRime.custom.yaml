@@ -1,0 +1,6 @@
+patch:
+  app_setting:
+    is_show_candidate_comment: true
+    impact_feedback: true
+    is_insert_symbol_auto_insert_candiate: false
+    current_chinese_type: 2
